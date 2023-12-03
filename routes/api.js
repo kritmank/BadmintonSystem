@@ -102,7 +102,7 @@ async function getLineName(py) {
   } 
   
   const userID = query.rows[0].line_id;
-  access_token = "d0/x8ZPRHwEoIVu2W1NjEajB0hv/4UMCRsysi3jVx/atEbBKKKseIOGOomf6vW1ZMcpm4zxrn7OQAQoGedhVI+fPKtnw9DcSKdYqmZuDCxMkAgvDmf+ggPau/CGH+ME4aPurE4CIwIW/x08q/52cWwdB04t89/1O/w1cDnyilFU=";
+  access_token = "Line_Bot_AccessToken";
   headers = {
     Authorization: `Bearer ${access_token}`
   }
@@ -203,7 +203,7 @@ let players = [];
 
   // Send message to Line
   const url = "https://notify-api.line.me/api/notify";
-  const token = "ykgmsRWjsGHeefMRx9BgukWOLf5dynPLDaZsRvwD5g6";
+  const token = "Line_Notify_AccessToken";
   const header = {'Content-Type': 'application/x-www-form-urlencoded', 'Authorization': `Bearer ${token}`};
 
   res = await axios.post(url, `message=${message}`, {headers: header});
