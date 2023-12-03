@@ -30,4 +30,10 @@ And also Line notify to alert the bill to owner.
 
 - Go to section LIFF --> add LIFF App
 - Copy Liff ID to paste to file 
-  - public/js/liff/init.js 
+  - public/js/liff/init.js
+
+### Create Line Message API (Line Bot)
+[Click Here to create!](https://developers.line.biz/console/channel/new?type=messaging-api)
+
+### Issue Line Notify Token
+[Click Here to create!](https://notify-bot.line.me/my/)
