@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>BadmintonSystem - Payment</title>
+
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script
+			src="https://kit.fontawesome.com/3010efffe8.js"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"
+		></script>
+
+		<link rel="stylesheet" href="/css/home/style.css" />
+		<link rel="stylesheet" href="/css/home/navbar.css" />
+		<link rel="stylesheet" href="/css/home/payment.css" />
+		<link rel="stylesheet" href="/css/preloader.css" />
+	</head>
+
+	<body>
+		<header>
+			<nav class="normal">
+				<div class="toggle-btn">
+					<i class="fa-solid fa-bars"></i>
+				</div>
+				<ul class="links">
+					<li><a href="/game/" class="nav-link active">HOME</a></li>
+					<li><a href="/payment/" class="nav-link">PAYMENT</a></li>
+					<li>
+						<a href="/player/" target="_blank" class="nav-link">PLAYERS</a>
+					</li>
+				</ul>
+			</nav>
+
+			<nav class="dropdown">
+				<li><a href="/game/" class="nav-link active">HOME</a></li>
+				<li><a href="/payment/" class="nav-link">PAYMENT</a></li>
+				<li><a href="/player/" target="_blank" class="nav-link">PLAYERS</a></li>
+			</nav>
+			<script>
+				const toggleButton = document.querySelector(".toggle-btn");
+				const toggleButtonIcon = document.querySelector(".toggle-btn i");
+				const dropDown = document.querySelector(".dropdown");
+
+				toggleButton.addEventListener("click", function () {
+					dropDown.classList.toggle("open");
+					const isOpen = dropDown.classList.contains("open");
+					toggleButtonIcon.classList = isOpen
+						? "fa-solid fa-xmark"
+						: "fa-solid fa-bars";
+				});
+			</script>
+		</header>
+
+		<div class="capture">
+			<a class="link-header" href="."><h2>Payment Bill</h2></a>
+			<div class="func-container">
+				<div class="select-date-form" id="form-date">
+					<label for="selected_date">Date :</label>
+					<input
+						type="date"
+						id="selected_date"
+						name="date"
+					/>
+				</div>
+				<button
+					type="button"
+					class="func-btn"
+					id="notify-btn"
+				>
+					<span class="button__icon"
+						><img src="/images/bell.ico" alt="notify"
+					/></span>
+				</button>
+				<button type="button" class="func-btn" id="download-btn">
+					<span class="button__icon"
+						><img src="/images/save.ico" alt="save"
+					/></span>
+				</button>
+			</div>
+			<div class="preloader">
+				<div class="loader"></div>
+			</div>
+			<div class="noData">
+				<img src="/images/noData.png" alt="" />
+			</div>
+			<div class="table-wrapper" style="display: none">
+				<table class="fl-table" id="myTable">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Cost</th>
+						</tr>
+					</thead>
+					<tbody id="myTbody"></tbody>
+				</table>
+			</div>
+		</div>
+		<script src="/js/preloader.js"></script>
+		<script src="/js/ajax/payment.js"></script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Succesful ⭐</title>
+
+		<script
+			src="https://kit.fontawesome.com/3010efffe8.js"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"
+		></script>
+
+		<link rel="stylesheet" href="/css/liff/success.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="top">
+				<i class="fa-regular fa-circle-check"></i>
+				<h3>SUCCESS</h3>
+			</div>
+			<div class="bottom">
+				<h4>Congratulations🎉</h4>
+				<h4>คุณ <%= displayName %></h4>
+				<p>Your Information was registered</p>
+				<% if (!isFriend) { %>
+					<p>Redirecting to add friend....</p>
+					<script>
+						setTimeout(function () {
+							window.location.href = "https://lin.ee/jkzS4T1";
+						}, 3000);
+					</script>
+				<% } %>
+			</div>
+		</div>
+	</body>
+</html>

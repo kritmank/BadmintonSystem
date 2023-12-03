@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Edit Player</title>
+
+		<script
+			src="https://kit.fontawesome.com/3010efffe8.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"
+		></script>
+
+		<link rel="stylesheet" href="/css/form.css" />
+	</head>
+	<body>
+		<div class="form-container">
+			<form
+				action="."
+				method="post"
+				autocomplete="off"
+				id="form"
+			>
+				<input type="text" name="id" value="<%= player.id %>" hidden>
+				<div class="nice-form-group">
+					<h1>
+						Edit Player: <%= player.name %>
+					</h1>
+				</div>
+
+				<div class="nice-form-group">
+					<label>Name</label>
+					<input
+						type="text"
+						name="name"
+						id="name"
+						placeholder="ชื่อเล่น"
+						value="<%= player.name %>"
+						required
+					/>
+				</div>
+				<div class="nice-form-group">
+					<label>LineID</label>
+					<input
+						type="text"
+						id="lineID"
+						placeholder="None"
+						value="<%= player.line_id %>"
+						readonly
+					/>
+				</div>
+
+				<div class="button-container">
+					<button
+						class="btn"
+						type="submit"
+						style="background: #2a9d8f"
+					>
+						Submit
+					</button>
+					<button
+						class="btn"
+						type="button"
+						style="background: #e76f51"
+						onclick="window.location.href='/player/delete/<%= player.id %>'"
+					>
+						Delete
+					</button>
+					<button
+						class="btn"
+						type="button"
+						onclick="window.history.back()"
+						style="background: #7f4f24"
+					>
+						Back
+					</button>
+				</div>
+			</form>
+		</div>
+		<script src="/js/ajax/player_form.js"></script>
+	</body>
+</html>

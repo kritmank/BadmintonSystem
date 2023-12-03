@@ -1,0 +1,133 @@
+h3 {
+	text-align: center;
+	font-size: 25px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #22333b;
+	padding-top: 0;
+	margin: 0 30px;
+	width: auto;
+}
+
+/* Table Styles */
+.fl-table {
+	width: 100%;
+}
+.fl-table td {
+	border-right: 1px solid #f8f8f8;
+}
+.fl-table td:last-child {
+	width: 10%;
+	height: fit-content;
+}
+
+.func-link {
+	text-decoration: none;
+	color: #6c584c;
+	border-radius: 100%;
+	padding: 5px;
+}
+
+.func-link img {
+	width: 25px;
+	height: 25px;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+	.noData img {
+		width: 840px;
+		height: 690px;
+	}
+
+	.func-link img {
+		width: 40px;
+		height: 40px;
+		margin: 0 8px;
+	}
+
+	.func-btn {
+		top: 10%;
+		left: 70%;
+	}
+
+	/* Table */
+	.fl-table {
+		display: block;
+		width: 100%;
+	}
+
+	.fl-table td:last-child,
+	.fl-table th:last-child {
+		width: auto;
+		height: 100px;
+	}
+
+	.fl-table thead,
+	.fl-table tbody,
+	.fl-table thead th {
+		display: block;
+	}
+
+	.fl-table thead th:first-child {
+		display: none;
+	}
+
+	.fl-table tr td:first-child {
+		display: none;
+	}
+
+	.fl-table thead th:last-child {
+		border-bottom: none;
+	}
+	.fl-table thead {
+		float: left;
+	}
+	.fl-table tbody {
+		width: auto;
+		position: relative;
+		overflow-x: auto;
+	}
+	.fl-table td,
+	.fl-table th {
+		padding: 35px 10px 20px 20px;
+		height: 120px;
+		vertical-align: middle;
+		box-sizing: border-box;
+		overflow-x: hidden;
+		overflow-y: auto;
+		width: 180px;
+		text-overflow: ellipsis;
+		padding-top: 30px;
+	}
+	.fl-table thead th {
+		text-align: left;
+		font-size: 30px;
+		border-bottom: 1px solid #f7f7f9;
+	}
+
+	.fl-table tbody tr:nth-child(odd) {
+		background: none;
+	}
+	.fl-table tr:nth-child(even) {
+		background: transparent;
+	}
+	.fl-table tr td:nth-child(odd) {
+		background: #f8f8f8;
+		border-right: 1px solid #e6e4e4;
+	}
+	.fl-table tr td:nth-child(even) {
+		border-right: 1px solid #e6e4e4;
+	}
+	.fl-table thead th,
+	.fl-table tr td {
+		font-size: 35px;
+	}
+	.fl-table tbody tr {
+		display: table-cell;
+	}
+	.fl-table tbody td {
+		display: block;
+		text-align: center;
+	}
+}

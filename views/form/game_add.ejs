@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Edit Game Form</title>
+
+		<script
+			src="https://kit.fontawesome.com/3010efffe8.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"
+		></script>
+
+		<link rel="stylesheet" href="/css/form.css" />
+	</head>
+	<body>
+		<div class="form-container">
+			<form action="." method="post" autocomplete="off" id="form">
+				<div class="nice-form-group">
+                    <h1>Add Game</h1>
+					<h1>Date: <%= date %></h1>
+				</div>
+
+                <input type="date" name="date" value="<%= date %>" hidden>
+				<div class="nice-form-group">
+					<label>Shuttle No.</label>
+					<input
+						type="number"
+						min="1"
+						max="12"
+						placeholder="เลขลูกขนไก่"
+						name="shuttle_no"
+						id="shuttle_n"
+						required
+					/>
+				</div>
+
+				<div class="nice-form-group">
+					<label>Player 1</label>
+					<input
+						type="text"
+						list="playerName"
+						name="py1"
+						id="py1"
+						placeholder="ผู้เล่นคนที่ 1"
+					/>
+				</div>
+
+				<div class="nice-form-group">
+					<label>Player 2</label>
+					<input
+						type="text"
+						list="playerName"
+						name="py2"
+						id="py2"
+						placeholder="ผู้เล่นคนที่ 2"
+					/>
+				</div>
+
+				<div class="nice-form-group">
+					<label>Player 3</label>
+					<input
+						type="text"
+						list="playerName"
+						name="py3"
+						id="py3"
+						placeholder="ผู้เล่นคนที่ 3"
+					/>
+				</div>
+
+				<div class="nice-form-group">
+					<label>Player 4</label>
+					<input
+						type="text"
+						list="playerName"
+						name="py4"
+						id="py4"
+						placeholder="ผู้เล่นคนที่ 4"
+					/>
+				</div>
+
+				<div class="button-container">
+					<button class="btn" type="submit" style="background: #2a9d8f">
+						Submit
+					</button>
+					<button
+						class="btn"
+						type="button"
+						onclick="window.history.back()"
+						style="background: #7f4f24"
+					>
+						Back
+					</button>
+				</div>
+			</form>
+		</div>
+		<script src="/js/ajax/autofill.js"></script>
+		<script src="/js/ajax/game_form.js"></script>
+	</body>
+</html>
